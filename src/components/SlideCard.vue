@@ -47,6 +47,7 @@
     opacity: 0;
     transform: translateX(-50px);
     transition: opacity 2s, transform 2s;
+    
   }
   
   .slide-in-fade-in.animate {

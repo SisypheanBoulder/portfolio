@@ -1,5 +1,5 @@
 <template>
-    <div :class="{ 'nav-hidden': isNavHidden }" class="navbar">
+    <div :class="{ 'nav-hidden': isNavHidden }" class="navbar" >
       <div class="dropdown">
         <button class="menu-button">Button 1</button>
         <button class="menu-button">Button 2</button>
@@ -52,13 +52,13 @@ body, html {
     top: 0;
     width: 100%;
     transition: top 2s;
-    height: 10%; /* Adjust this value as needed */
+    height: 10%;
     display: flex;
     align-items: center;
-    background-image: url(@/assets/dropmenu.png);
+    background-image: url(@/assets/dropmenublk.png);
     background-size: 100%;
     background-position: center;
-    opacity: 0.92; /* Adjust this value as needed */
+    opacity: 0.97; 
     justify-content: center;
   }
   
@@ -76,13 +76,14 @@ body, html {
     width: auto;
     padding: 10px;
     background-color: #00000000;
-    color: #ebebeb;
+    color: #afadad;
     text-align: left;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 20px;
-    font-family: "UniSans",-apple-system,"Segoe UI","Open Sans","Helvetica Neue",sans-serif;
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
+    Liberation Mono,Courier New,monospace;
     font-weight: 600;
     transition: background-color 0.5s ease, color 0.5s ease;
 
@@ -90,7 +91,7 @@ body, html {
 
 .menu-button:hover {
     background-color: #007bff00;
-    color: #08746e;
+    color: #000000;
 }
   
   </style>

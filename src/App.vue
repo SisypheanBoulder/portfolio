@@ -4,9 +4,9 @@
         <img src="./assets/Springfieldstrippergrey.gif" alt="Logo" class="logo">
         <div class="loading-animation"></div>
       </div>
-        <div id="background">
+      <div id="background">
           <div class="background-video">
-            <img src="./assets/bgstatic.png" alt = "bg" class="bg">
+            <img src="./assets/bgstaticblk.png" alt = "bg" class="bg"> -->
             <!-- <video autoplay muted loop>
               <source src="./assets/bluearena.mp4" type="video/mp4">
             </video> -->
@@ -18,6 +18,8 @@
           <ParallaxEffect/>
           <DropMenu/>
           <SlideCard/>
+          <ScrollJack/>
+
   </div>
 </template>
 
@@ -27,20 +29,9 @@ import MainCard from './components/MainCard.vue'
 import ParallaxEffect from './components/ParallaxEffect.vue'
 import DropMenu from './components/DropMenu.vue'
 import SlideCard from './components/SlideCard.vue'
+import ScrollJack from './components/ScrollJack.vue'
+
 export default {
-  data() {
-      return {
-        isLoading: true,
-        counter: 0,
-        msg: 'Welcome to Your Vue.js App',
-        user: {
-          firstname: 'John',
-          lastname: 'Doe',
-          email: 'johndoe@mail.com',
-          isAdmin: true
-      }
-      };
-    },
     mounted() {
       const delay = Math.random() * (5000) + 500;
 
@@ -54,17 +45,8 @@ export default {
     ParallaxEffect,
     DropMenu,
     SlideCard,
+    ScrollJack,
   },  
-  computed: {
-    fullname() {
-      return `${this.user.firstname} ${this.user.lastname}`
-    }
-  },
-  methods: {
-    followUser() {
-      this.counter++
-    }
-  }
 }
 
 </script>
@@ -108,14 +90,14 @@ export default {
     }
   }
 
-  .bg {
+   .bg {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-  }
+  } 
 
   /* .background-video {
   position: fixed;
@@ -138,10 +120,9 @@ export default {
 } */
 
 #app {
-  padding-top: 20px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding-top: 10px;
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
+  Liberation Mono,Courier New,monospace;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
