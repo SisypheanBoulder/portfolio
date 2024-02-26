@@ -1,13 +1,9 @@
 <template>
     <div :class="{ 'nav-hidden': isNavHidden }" class="navbar">
-      <!-- Navbar content here -->
       <div class="dropdown">
-        <button @click="toggleDropdown" class="dropbtn">Dropdown</button>
-        <div v-show="showDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
+        <button class="menu-button">Button 1</button>
+        <button class="menu-button">Button 2</button>
+        <button class="menu-button">Button 3</button>
       </div>
     </div>
   </template>
@@ -40,30 +36,61 @@
   
       return { isNavHidden };
     },
-    data() {
-      return {
-        showDropdown: false,
-      };
-    },
-    methods: {
-      toggleDropdown() {
-        this.showDropdown = !this.showDropdown;
-      },
-    },
   };
   </script>
   
   <style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
   .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    transition: top 0.3s;
+    transition: top 2s;
+    height: 10%; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    background-image: url(@/assets/dropmenu.png);
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.92; /* Adjust this value as needed */
+    justify-content: center;
   }
   
   .nav-hidden {
-    top: -50px;
+    top: -10%;
   }
+
+  .dropdown {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+  .menu-button {
+    display: block;
+    width: auto;
+    padding: 10px;
+    background-color: #00000000;
+    color: #ebebeb;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    font-family: "UniSans",-apple-system,"Segoe UI","Open Sans","Helvetica Neue",sans-serif;
+    font-weight: 600;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+.menu-button:hover {
+    background-color: #007bff00;
+    color: #08746e;
+}
   
-  /* rest of your styles */
   </style>

@@ -32,6 +32,7 @@ export default {
       });
     };
 
+// stops the event listener when the component is unmounted to prevent memory leaks
     onMounted(() => {
       window.addEventListener('mousemove', handleMouseMove);
     });
@@ -44,3 +45,4 @@ export default {
   },
 };
 </script>
+

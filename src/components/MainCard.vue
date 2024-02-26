@@ -5,6 +5,7 @@
                 <img src="https://randomuser.me/api/portraits/lego/8.jpg" alt="">
                 <h2>John Doe</h2>
                 <p>Web Developer</p>
+                <img src="https://randomuser.me/api/portraits/lego/8.jpg" alt="">
             </div>
         </div>
     </div>
