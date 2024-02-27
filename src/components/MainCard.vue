@@ -1,30 +1,44 @@
 <template>
-    <div class="card">
-        <p class="body-text">{{ "Developer" }}</p>
-        <h1>{{ "Adrian.Stack" }}</h1>
-        <img src="../assets/github-sign.png" alt="githublogo" class="logo">
-        <img src="../assets/email.png" alt="emaillogo" class="logo">
-        <img src="../assets/bookmark.png" alt="bookamrklogo" class="logo">
+  <div class="card">
+    <p class="body-text">{{ "Developer" }}</p>
+    <h1>{{ "adrian.stack@proton.me" }}</h1>
+    <button class="icon-button" @click="goToGithub">
+      <img src="../assets/github-sign.png" alt="githublogo" class="logo">
+    </button>
+    <button class="icon-button" @click="sendEmail">
+      <img src="../assets/email.png" alt="emaillogo" class="logo">
+    </button>
+    <button class="icon-button" @click="bookmark">
+      <img src="../assets/bookmark.png" alt="bookamrklogo" class="logo">
+    </button>
+  </div>
+</template>
 
-
-    </div>
-  </template>
-  
-  <script>
-
-  export default {
-    props: {
-      title: {
-        type: String,
-        required: true
-      },
-      description: {
-        type: String,
-        required: true
-      }
+<script>
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    goToGithub() {
+      window.open('https://github.com/yourusername', '_blank');
+    },
+    sendEmail() {
+      window.location.href = 'adrian.stack@proton.me';
+    },
+    bookmark() {
+      alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page :)');
     }
   }
-  </script>
+}
+</script>
   
   <style scoped>
   .card {
@@ -39,16 +53,11 @@
     border-radius:10px;
     margin: 50px;
     margin-top: 250px;
-    font-size: 30px;
+    font-size: calc(12px + 1vw);
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
     Liberation Mono,Courier New,monospace;
     text-align: left;
   }
-
-  .header {
-  font-size: 50px; 
-  font-weight: 600;
-}
 
 .body-text {
   font-size: 17px; 
@@ -58,6 +67,18 @@
     height: 30px;
     margin: 15px;
   }
+
+  .icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-button:hover {
+  opacity: 0.4;
+}
 
   </style>
 

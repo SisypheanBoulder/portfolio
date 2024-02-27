@@ -6,10 +6,10 @@
       </div>
       <div id="background">
           <div class="background-video">
-            <img src="./assets/bgstaticblk.png" alt = "bg" class="bg">
-            <!-- <video autoplay muted loop>
-              <source src="./assets/bluearena.mp4" type="video/mp4">
-            </video> -->
+            <!-- <img src="./assets/bgstaticblk.png" alt = "bg" class="bg"> -->
+            <video autoplay muted loop>
+              <source src="./assets/Blkdsatbghq-1.mp4" type="video/mp4">
+            </video> 
           </div>
           </div>
           <ScrollJack/>
@@ -93,7 +93,7 @@ export default {
     z-index: -1;
   } 
 
-  /* .background-video {
+   .background-video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -111,6 +111,6 @@ export default {
   height: auto;
   min-width: 100%;
   min-height: 100%;
-} */
+} 
 
 </style>

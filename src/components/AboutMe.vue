@@ -1,10 +1,15 @@
 <template>
     <div class="card">
-        <p>{{ "Developer" }}</p>
-        <h1>{{ "Adrian.Stack" }}</h1>
-        <img src="../assets/github-sign.png" alt="githublogo" class="logo">
-        <img src="../assets/email.png" alt="emaillogo" class="logo">
-        <img src="../assets/bookmark.png" alt="bookamrklogo" class="logo">
+        <h1>{{ "About ME" }}</h1>
+        <p class="body-text">{{ "Hello! I am Adrian, a fresh graduate with a keen interest in "+ 
+        "computer science across all aspects of the field. I am currently going to be doing " + 
+        "freelance website projects with Vue, as it is a user friendly and responsive approach "+
+        "to web design, I also immerse myself in game design and digital art when I have the " + 
+        "time. "}}</p>
+        <p class="body-text">{{ "Throughout my time in university I was involved in dozens of "+ 
+        "group projects and tasks, where I came to the understanding that valuing teamwork " + 
+        "and communication is keystone in any project, and a value I try to exemplify through "+
+        "my work and extra curricular activities and responsibilities"}} </p>
 
 
     </div>
@@ -29,29 +34,24 @@
   <style scoped>
   .card {
     position: relative;
-    width: 600px;
-    height: 250px;
+    width: 65%;
+    height: 45%;
     padding: 20px;
-    background-color: #00000080;
+    background-color: #0f0f0f80;
     overflow: hidden;
     color: rgb(255, 255, 255);
-    box-shadow: 9px 10px 9px 0px rgba(94, 94, 94, 0.555);
+    box-shadow: 0px 0px 20px 10px rgba(94, 94, 94, 0.555);
     border-radius:10px;
-    margin: 50px;
-    margin-top: 250px;
-    font-size: 30px;
+    margin: 10%;
+    margin-top: 10%;
+    font-size: calc(12px + 1vw);
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
     Liberation Mono,Courier New,monospace;
     text-align: left;
   }
 
-  .header {
-  font-size: 50px; 
-  font-weight: 600;
-}
-
 .body-text {
-  font-size: 10px; 
+  font-size: calc(0.8rem + 0.3vw); 
 }
 .logo {
     width: 30px;
