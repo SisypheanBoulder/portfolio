@@ -1,9 +1,9 @@
 <template>
     <div :class="{ 'nav-hidden': isNavHidden }" class="navbar" >
       <div class="dropdown">
-        <button class="menu-button">Button 1</button>
-        <button class="menu-button">Button 2</button>
-        <button class="menu-button">Button 3</button>
+        <button class="menu-button"><img src="../assets/homeicon.png" alt="homebutton" class="logo"></button>
+        <button class="menu-button">About me</button>
+        <button class="menu-button">Showcase</button>
       </div>
     </div>
   </template>
@@ -80,18 +80,25 @@ body, html {
     text-align: left;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     font-size: 20px;
     font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
     Liberation Mono,Courier New,monospace;
     font-weight: 600;
     transition: background-color 0.5s ease, color 0.5s ease;
+    text-align: right;
+
 
 }
 
-.menu-button:hover {
+
+  .menu-button:hover {
     background-color: #007bff00;
     color: #000000;
-}
-  
+  }
+
+  .logo {
+    width: 40px; 
+    height: 40px; 
+  }
+
   </style>

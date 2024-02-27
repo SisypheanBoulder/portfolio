@@ -6,32 +6,33 @@
       </div>
       <div id="background">
           <div class="background-video">
-            <img src="./assets/bgstaticblk.png" alt = "bg" class="bg"> -->
+            <img src="./assets/bgstaticblk.png" alt = "bg" class="bg">
             <!-- <video autoplay muted loop>
               <source src="./assets/bluearena.mp4" type="video/mp4">
             </video> -->
           </div>
           </div>
-          <div id="app">
-          </div>  
-          <MainCard/>
-          <ParallaxEffect/>
-          <DropMenu/>
-          <SlideCard/>
           <ScrollJack/>
+          <DropMenu/>
 
   </div>
 </template>
 
 <script>
 
-import MainCard from './components/MainCard.vue'
-import ParallaxEffect from './components/ParallaxEffect.vue'
 import DropMenu from './components/DropMenu.vue'
-import SlideCard from './components/SlideCard.vue'
 import ScrollJack from './components/ScrollJack.vue'
 
 export default {
+  components: {
+    DropMenu,
+    ScrollJack,
+  },  
+  data() {
+    return {
+      isLoading: true, // Add this line
+    }
+  },
     mounted() {
       const delay = Math.random() * (5000) + 500;
 
@@ -39,14 +40,7 @@ export default {
         this.isLoading = false;
       }, delay);
     },
-  name: 'App',
-  components: {
-    MainCard,
-    ParallaxEffect,
-    DropMenu,
-    SlideCard,
-    ScrollJack,
-  },  
+
 }
 
 </script>
@@ -119,12 +113,4 @@ export default {
   min-height: 100%;
 } */
 
-#app {
-  padding-top: 10px;
-  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
-  Liberation Mono,Courier New,monospace;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

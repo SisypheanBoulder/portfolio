@@ -1,17 +1,19 @@
 <template>
     <div class="card">
-        <h2>{{ "Adrian Tran" }}</h2>
-        <p>{{ "description" }}</p>
+        <p>{{ "Developer" }}</p>
+        <h1>{{ "Adrian.Stack" }}</h1>
+        <img src="../assets/github-sign.png" alt="githublogo" class="logo">
+        <img src="../assets/email.png" alt="emaillogo" class="logo">
+        <img src="../assets/bookmark.png" alt="bookamrklogo" class="logo">
+
+
     </div>
   </template>
   
   <script>
+
   export default {
     props: {
-      image: {
-        type: String,
-        required: true
-      },
       title: {
         type: String,
         required: true
@@ -27,27 +29,35 @@
   <style scoped>
   .card {
     position: relative;
-    width: 1200px;
-    height: 500px;
+    width: 600px;
+    height: 250px;
     padding: 20px;
-    background-color: #20242dfd;
+    background-color: #00000080;
     overflow: hidden;
     color: rgb(255, 255, 255);
-    box-shadow: 9px 10px 9px 0px rgba(97, 97, 97, 0.767);
+    box-shadow: 9px 10px 9px 0px rgba(94, 94, 94, 0.555);
     border-radius:10px;
     margin: 50px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: #CCCCCC;
+    margin-top: 250px;
+    font-size: 30px;
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
+    Liberation Mono,Courier New,monospace;
+    text-align: left;
   }
 
-  
-  .card-text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
-    color: white;
-    background: rgba(0,0,0,0.5);
+  .header {
+  font-size: 50px; 
+  font-weight: 600;
+}
+
+.body-text {
+  font-size: 10px; 
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
   }
+
   </style>
+

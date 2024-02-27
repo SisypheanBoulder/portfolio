@@ -1,10 +1,15 @@
 <template>
     <div>
       <div id="trigger1" class="scroll-trigger"></div>
-      <section id="panel1" class="panel p1">Section 1</section>
+      <section id="panel1" class="panel p1">
+        <MainCard />
+      </section>
   
       <div id="trigger2" class="scroll-trigger"></div>
       <section id="panel2" class="panel p2">Section 2</section>
+      
+      <div id="trigger3" class="scroll-trigger"></div>
+      <section id="panel3" class="panel p3">Section 3</section>
   
     </div>
   </template>
@@ -12,39 +17,42 @@
   <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
+  import MainCard from './MainCard.vue'
+
   export default {
-    mounted() {
-      gsap.registerPlugin(ScrollTrigger);
-  
-      gsap.to("#panel1", {
-        y: "-100%", 
-        scrollTrigger: {
-          trigger: "#trigger1",
-          start: "top top",
-          end: "+=100%",
-          scrub: true,
-          pin: true
-        }
-      });
-  
-      gsap.to("#panel2", {
-        y: "-100%", 
-        scrollTrigger: {
-          trigger: "#trigger2",
-          start: "top top",
-          end: "+=100%",
-          scrub: true,
-          pin: true
-        }
-      });
-  
-      // Add as many animations as you have sections
+  components: {
+    MainCard
+  },
+  mounted() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to("#panel2", {
+    y: "-100%", 
+    scrollTrigger: {
+      trigger: "#trigger2",
+      start: "top bottom",
+      end: "+=90%", // Change this line
+      scrub: 1.5,
+      pin: true
     }
-  }
+  });
+
+  gsap.to("#panel3", {
+    y: "-100%", 
+    scrollTrigger: {
+      trigger: "#trigger3",
+      start: "top bottom",
+      end: "+=80%",
+      scrub: 1.5,
+      pin: true
+    }
+  });
+}
+}
   </script>
   
   <style scoped>
+  
   body {
     margin: 0;
     padding: 0;
@@ -52,7 +60,7 @@
   }
   
   .panel {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: fixed;
     top: 100%;
@@ -62,14 +70,19 @@
   }
   
   .p1 {
-    background-color: rgb(0, 0, 0);
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.322);
   }
   
   .p2 {
-    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
   }
 
-  
+
+  .p3 {
+    background-color: rgb(255, 255, 255);
+  }  
   .scroll-trigger {
     height: 100vh;
   }
