@@ -96,7 +96,8 @@ body, html {
     color: #000000;
   }
 
-  .logo {
+
+  .menu-button .logo {
     width: 40px; 
     height: 40px; 
   }

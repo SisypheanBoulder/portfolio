@@ -6,7 +6,9 @@
       </section>
   
       <div id="trigger2" class="scroll-trigger"></div>
-      <section id="panel2" class="panel p2">Section 2</section>
+      <section id="panel2" class="panel p2">Section 2
+        <AboutMe />
+      </section>
       
       <div id="trigger3" class="scroll-trigger"></div>
       <section id="panel3" class="panel p3">Section 3</section>
@@ -17,11 +19,13 @@
   <script>
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import MainCard from './MainCard.vue'
+  import MainCard from './MainCard.vue';
+  import AboutMe from './AboutMe.vue';
 
   export default {
   components: {
-    MainCard
+    MainCard,
+    AboutMe,
   },
   mounted() {
   gsap.registerPlugin(ScrollTrigger);

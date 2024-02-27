@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <p class="body-text">{{ "Developer" }}</p>
+        <p>{{ "Developer" }}</p>
         <h1>{{ "Adrian.Stack" }}</h1>
         <img src="../assets/github-sign.png" alt="githublogo" class="logo">
         <img src="../assets/email.png" alt="emaillogo" class="logo">
@@ -51,7 +51,7 @@
 }
 
 .body-text {
-  font-size: 17px; 
+  font-size: 10px; 
 }
 .logo {
     width: 30px;
