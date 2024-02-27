@@ -34,7 +34,7 @@ export default {
     }
   },
     mounted() {
-      const delay = Math.random() * (5000) + 500;
+      const delay = Math.random() * (5000) + 3000;
 
       setTimeout(() => {
         this.isLoading = false;
