@@ -28,10 +28,10 @@ export default {
   },
   methods: {
     goToGithub() {
-      window.open('https://github.com/yourusername', '_blank');
+      window.open('https://github.com/SisypheanBoulder', '_blank');
     },
     sendEmail() {
-      window.location.href = 'adrian.stack@proton.me';
+      window.open('mailto:adrian.stack@proton.me', '_blank');
     },
     bookmark() {
       alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Cmd' : 'Ctrl') + '+D to bookmark this page :)');
