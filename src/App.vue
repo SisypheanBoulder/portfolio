@@ -1,7 +1,6 @@
 <template>
     <div id="Loading">
       <div v-if="isLoading" class="loading-screen">
-        <img src="./assets/Springfieldstrippergrey.gif" alt="Logo" class="logo">
         <div class="loading-animation"></div>
       </div>
       <div id="background">
@@ -34,7 +33,7 @@ export default {
     }
   },
     mounted() {
-      const delay = Math.random() * (5000) + 3000;
+      const delay = Math.random() * (1000);
 
       setTimeout(() => {
         this.isLoading = false;
