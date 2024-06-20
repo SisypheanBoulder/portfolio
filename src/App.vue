@@ -59,11 +59,6 @@ export default {
   flex-direction: column;
   z-index: 9999;
 }
-
-  .logo {
-    width: 500px;
-    height: 200px;
-  }
   
   .loading-animation {
     width: 50px;
